@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title> Logged In | Form </title>
+
+  <meta charset="UTF-8">
+  <meta name = "description" content = "COVID-19">
+  <meta name = "keywords" content = "HTML, CSS, XML, JavaScript">
+  <meta name = "author" content = "Christian Iannantuono">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+
+  <script src="covid_form.js"></script>
+
+</head>
+
+
+<body>
+
+  <h1> You're In! </h1>
+  <h2> Please answer the questions below </h2>
+
+
+
+
+  <table style="width:75%">
+  <form>
+    <tr>
+      <td>Do you or have you had any of the following symptoms in the past 48 hours: New or worsening cough, blah, blah, something else?</td>
+      <td><input type="radio" id="fail1" name="gender" value="yes1">
+          <label for="yes1">YES</label><br></td>
+      <td><input type="radio" id="pass1" name="gender" value="no1">
+          <label for="no1">NO</label><br></td>
+    </tr>
+  </form>
+  <form>
+    <tr>
+      <td>Have you come into contact with anyone who has or is presumed to have COVID-19? Have you come into contact with anyone who has or is presumed to have COVID-19?</td>
+      <td><input type="radio" id="fail2" name="gender" value="yes2">
+          <label for="yes2">YES</label><br></td>
+      <td><input type="radio" id="pass2" name="gender" value="no2">
+          <label for="no2">NO</label><br></td>
+    </tr>
+  </form>
+  <form>
+    <tr>
+      <td>Do you have a mask to wear to work today?</td>
+      <td><input type="radio" id="pass3" name="gender" value="yes3">
+          <label for="yes3">YES</label><br></td>
+      <td><input type="radio" id="fail3" name="gender" value="no3">
+          <label for="no3">NO</label><br></td>
+    </tr>
+  </form>
+  <form>
+    <tr>
+      <td>Have you read Artech Images Inc. Terms and Conditions and Privacy Statement?</td>
+      <td><input type="radio" id="pass4" name="gender" value="yes4">
+          <label for="yes4">YES</label><br></td>
+      <td><input type="radio" id="fail4" name="gender" value="no4">
+          <label for="no4">NO</label><br></td>
+    </tr>
+  </form>
+  <form>
+    <tr>
+      <td>I have read and agreed to the Artech Images Inc Terms and Agreements and Privacy Statement</td>
+      <td><input type="checkbox" id="myCheck" onclick="myFunction()"></td>
+    </tr>
+  </form>
+  </table>
+
+
+
+
+  <button onclick="signOut()" id="signOut"> Submit </button>
+
+</body>
+
+<style>
+#signOut{
+  background-color: #663399;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 15px 32px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin-top: 15px;
+  margin-left: 35%;
+}
+
+
+th, td {
+  padding-bottom: 30px;
+  padding-right: 20px;
+}
+
+h1{
+  font-family: sans-serif;
+}
+
+h2{
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+tr{
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+table{
+  padding-left: 5%;
+}
+
+</style>
+
+</html>
