@@ -13,6 +13,25 @@ firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 
+//Take user to a different page
+auth.onAuthStateChanged(function(user){
+  if(user){
+    // is signed in
+    var email = user.email;
+    alert("Good Login Attempt");
+    window.onunload = function () {
+        auth.signOut();
+    };
+
+
+  }else{
+    //no user is signed in
+    window.location.href = 'index.html';
+  }
+
+});
+
+
 function signOut(){
   alert("By clicking OK you are verifying your answers are correct.");
   if(document.getElementById("fail1").checked) {
@@ -27,6 +46,6 @@ function signOut(){
   if(document.getElementById("fail4").checked) {
         window.location.href = 'fail.html';
     }
-  
+
     auth.signOut();
 }
